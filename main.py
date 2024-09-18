@@ -8,7 +8,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 app = FastAPI()
 
 
-df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/movies_dataset_modificado.csv')
+df = pd.read_csv('movies_dataset_modificado.csv')
 
 # Mapeo de nombres de meses en inglés a español
 meses_ingles_a_espanol = {
@@ -36,7 +36,7 @@ def get_cantidad_peliculas(mes: str):
     return {"mes": mes, "cantidad_peliculas": cantidad} 
 
 
-df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/movies_dataset_modificado.csv')
+df = pd.read_csv('movies_dataset_modificado.csv')
 
 # Mapeo de los días de la semana en inglés a español
 dias_ingles_a_espanol = {
@@ -72,7 +72,7 @@ def get_cantidad_peliculas(dia: str):
     return {"dia": dia, "cantidad_peliculas": cantidad}
 
 
-df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/movies_dataset_modificado.csv')
+df = pd.read_csv('movies_dataset_modificado.csv')
 
 # Convertir la columna 'release_date' a formato datetime
 df['release_date'] = pd.to_datetime(df['release_date'], errors='coerce')
@@ -102,7 +102,7 @@ def get_score_pelicula(titulo: str):
 
 
 
-df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/movies_dataset_modificado.csv')
+df = pd.read_csv('movies_dataset_modificado.csv')
 
 def votos_titulo(titulo_de_la_filmacion):
     # Buscar la película por el título ingresado
@@ -137,8 +137,8 @@ def get_votos_pelicula(titulo: str):
     return resultado
 
 
-movies_df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/movies_dataset_modificado.csv')
-credits_df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/credits.csv')
+movies_df = pd.read_csv('movies_dataset_modificado.csv')
+credits_df = pd.read_csv('credits.csv')
 
 # Asegurarnos de que las columnas de budget y revenue existan para calcular el retorno
 if 'revenue' in movies_df.columns and 'budget' in movies_df.columns:
@@ -186,8 +186,8 @@ def obtener_exito_actor(nombre_actor: str):
 
 
 
-movies_df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/movies_dataset_modificado.csv')
-credits_df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/credits.csv')
+movies_df = pd.read_csv('movies_dataset_modificado.csv')
+credits_df = pd.read_csv('credits.csv')
 
 # Asegurarnos de que las columnas de budget y revenue existan para calcular el retorno
 if 'revenue' in movies_df.columns and 'budget' in movies_df.columns:
@@ -250,7 +250,7 @@ def obtener_director(nombre_director: str):
 
 
 
-df = pd.read_csv('C:/Users/xSPIt/OneDrive/Escritorio/fastapi01-/fastapi-env/movies_dataset_modificado.csv')
+df = pd.read_csv('movies_dataset_modificado.csv')
 
 # Asegúrate de que los títulos de las películas no tengan valores nulos
 df = df[df['title'].notna()]
