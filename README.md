@@ -8,7 +8,8 @@ Este proyecto es una API que utiliza FastAPI para ofrecer diversos endpoints que
 - Votos de una Película: Devuelve la cantidad de votos y el promedio de calificación de una película.
 - Éxito de una Película: Devuelve información sobre el éxito de una película, basado en métricas como el retorno financiero, la cantidad de votos y el promedio de calificación.
 - Éxito de un Director: Devuelve el éxito de un director basándose en su filmografía.
-
+- Recomendaciones de Películas: A partir de un título de película, el sistema sugiere películas similares utilizando la similitud del coseno.
+  
 ## Tecnologias utilizadas
 - FastAPI: Framework para construir la API.
 - Pandas: Para manipulación de datos.
